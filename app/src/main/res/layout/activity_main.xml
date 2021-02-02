@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    tools:context=".activity.MainActivity">
+
+
+    <EditText
+        android:id="@+id/et_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/roundborder"
+        android:drawableRight="@drawable/ic_baseline_search_24"
+        android:drawablePadding="18dp"
+        android:hint="Search"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@android:color/black" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_all_categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_search_view" />
+
+    <TextView
+        android:id="@+id/ctv_no_items_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_items_found"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_22"
+        android:visibility="gone" />
+
+
+</RelativeLayout>
